@@ -1,0 +1,55 @@
+.CircleGradient {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background-color: #f00;
+
+  position: relative;
+}
+
+.CircleGradient:before {
+  animation: circle-gradient1 infinite 1s ease;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  background-color: #00f;
+}
+
+.CircleGradient:after {
+  animation: circle-gradient2 infinite 1s ease;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  background-color: #f00;
+}
+
+@keyframes circle-gradient1 {
+  0% {
+    top: 50px;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes circle-gradient2 {
+  0% {
+    top: 50px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0px;
+  }
+}

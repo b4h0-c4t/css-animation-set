@@ -1,0 +1,35 @@
+.CircleLoaderAnother {
+  animation: circle-loader-another1 infinite 1s ease;
+  border: solid 5px #eee;
+  border-top: solid 5px #666;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: #666;
+  overflow: hidden;
+}
+.CircleLoaderAnother::before {
+  display: block;
+  position: absolute;
+  content: "";
+  bottom: calc(50% + 10px);
+  left: 0;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);}
+
+@keyframes circle-loader-another1 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes circle-loader-another2 {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
