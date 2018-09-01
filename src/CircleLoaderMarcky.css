@@ -1,0 +1,53 @@
+.CircleLoaderMarcky {
+  animation: circle-loader-marcky1 infinite 1s linear;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  background-color: #eee;
+  position: relative;
+}
+.CircleLoaderMarcky:before {
+  animation: circle-loader-marcky2 infinite 1.618s ease;
+  display: block;
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -60px;
+  left: 0px;
+  background-color: #666;
+}
+
+.CircleLoaderMarcky:after {
+  display: block;
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+@keyframes circle-loader-marcky1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-loader-marcky2 {
+  0% {
+    top: -55px;
+  }
+  50% {
+    top: -5px;
+  }
+  100% {
+    top: -55px;
+  }
+}
